@@ -1,0 +1,10 @@
+<h2>Inventory List</h2>
+<ng-container *ngIf="!!items.length">
+  <div *ngFor="let item of items">
+    <div>
+      <img src="{{ item.imageUrl }}" alt="{{ item.description }}" />
+      <span>{{ item.description }} </span>
+      <button class="btn btn-primary" (click)="onAdd(item.id)">Add</button>
+    </div>
+  </div>
+</ng-container>
